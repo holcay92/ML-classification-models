@@ -45,6 +45,7 @@ print("confusion_matrix: ", cm)
 print("accuracy score :", accuracy_score( y_test, y_pred))
 
 # Visualising the Training set results
+# For only two independent variables. If there are more than two variables it can not be used
 from matplotlib.colors import ListedColormap
 X_set, y_set = sc.inverse_transform(X_train), y_train
 X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 10, stop = X_set[:, 0].max() + 10, step = 0.25),
